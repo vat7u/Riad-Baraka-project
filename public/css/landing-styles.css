@@ -1,0 +1,111 @@
+/* UNIVERSAL */
+:root {
+  --yellow: #78c1ff;
+  --red: #003f9a;
+  --black: #232323;
+  --grey: #6f6f6f;
+  --white: #ffffff;
+  --white2: #F7F7F7;
+  /* only for background */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+  background-color: var(--white2);
+  background-image: url('../images/24chicken-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.726);
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 60px;
+  /* footer height */
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* CONTENT */
+.title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  font-family: 'Fugaz One', cursive;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.621) 5px 5px 5px;
+}
+
+.title h1 {
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 400;
+  margin: 0;
+}
+
+#yellow {
+  color: var(--yellow);
+  font-size: larger;
+}
+
+#red {
+  color: var(--red);
+}
+
+.title h3 {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.title button {
+  display: block;
+  width: 250px;
+  padding: 12px 0;
+  margin: 20px auto;
+  box-sizing: border-box;
+  background-color: var(--red);
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  border-radius: 3px;
+  color: var(--white);
+  border: none;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.title button:hover {
+  background-color: var(--white);
+  color: var(--red);
+  transition: 0.5s;
+  top: -8px;
+}

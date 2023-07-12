@@ -1,0 +1,226 @@
+/* UNIVERSAL */
+:root {
+  --yellow: #78c1ff;
+  --red: #003f9a;
+  --black: #232323;
+  --grey: #6f6f6f;
+  --white: #ffffff;
+  --white2: #F7F7F7; /* only for background */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 20px;
+    margin-right: 50px;
+  }
+}
+
+/* NAVBAR - responsive */
+.nav {
+  height: 80px;
+  width: 100%;
+  background-color: var(--white);
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 5;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.119);
+}
+
+.nav>.content-margin>.nav-header {
+  display: inline;
+}
+
+.nav>.content-margin>.nav-header>.nav-title {
+  display: inline-block;
+  padding: 20px;
+}
+
+.nav>.content-margin>.nav-header>.nav-title p {
+  font-size: 20px;
+  text-transform: none;
+  margin: -45px 0 0 190px;
+}
+
+
+.nav-title>p {
+  padding: 7px;
+}
+
+#logo {
+  width: 150px;
+}
+
+.nav>.content-margin>.nav-btn {
+  display: none;
+}
+
+.nav>.content-margin>.nav-links {
+  display: flex;
+  float: right;
+  font-size: 18px;
+}
+
+.nav>.content-margin>.nav-links>a, .logout-button {
+  display: inline-block;
+  float: right;
+  color: var(--black);
+  text-align: right;
+  padding: 30px 30px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.logout-button{
+  border:none;
+  background-color: white;
+}
+
+#log {
+  color: var(--red);
+}
+
+#log:hover {
+  color: var(--black);
+}
+
+.nav>.content-margin>.nav-links>a:hover, .logout-button:hover {
+  background-color: rgba(0, 0, 0, 0.057);
+  color: var(--red);
+}
+
+.nav>.content-margin>#nav-check {
+  display: none;
+}
+
+@media (max-width:900px) {
+  .hamburger {
+    margin-top: 14px;
+    margin-left: 0px;
+  }
+
+  .nav>.content-margin>.nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .nav>.content-margin>.nav-btn>label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .nav>.content-margin>.nav-btn>label:hover,
+  .nav #nav-check:checked~.nav-btn>.content-margin>label {
+    background-color: rgba(0, 0, 0, 0.057);
+  }
+
+  .nav>.content-margin>.nav-btn>label>.hamburger>span {
+    display: block;
+    width: 22px;
+    height: 10px;
+    border-top: 2px solid var(--black);
+  }
+
+  .nav>.content-margin>.nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: var(--white);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 80px;
+    left: 0px;
+  }
+
+  .nav>.content-margin>.nav-links>a {
+    display: block;
+    width: 100%;
+  }
+
+  .nav>.content-margin>#nav-check:not(:checked)~.nav-links {
+    height: 0px;
+  }
+
+  .nav>.content-margin>#nav-check:checked~.nav-links {
+    height: 350px;
+    overflow-y: auto;
+  }
+}
+
+/* FOOTER */
+.footer {
+  height: 60px;
+  background-color: var(--white);
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.119);
+  overflow: hidden;
+}
+
+.footer-left p {
+  color: var(--black);
+  margin: 20px;
+  float: left;
+  text-decoration: none;
+}
+
+#red {
+  color: var(--red);
+}
+#yellow {
+  color: var(--yellow);
+  font-size: larger;
+}
+
+.footer-right {
+  float: right;
+  padding-top: 20px;
+  display: flex;
+}
+
+.footer-right a {
+  color: var(--grey);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footer-right-text {
+  font-size: 16px;
+  padding-right: 20px;
+}
+
+.footer-right-text a {
+  padding-right: 20px;
+}
+
+.footer-right a:hover {
+  color: var(--red);
+}
+
+@media screen and (max-width: 600px) {
+  .footer-right a {
+    display: none;
+  }
+}
+

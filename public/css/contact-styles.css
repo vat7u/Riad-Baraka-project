@@ -1,0 +1,166 @@
+/* UNIVERSAL */
+:root {
+  --yellow: #78c1ff;
+  --red: #003f9a;
+  --black: #232323;
+  --grey: #6f6f6f;
+  --white: #ffffff;
+  --white2: #F7F7F7; /* only for background */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+  background-color: var(--white2);
+  background-image: url('../images/24chicken-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.352);
+  overflow-x: hidden;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 60px; /* footer height */
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* CONTENT */
+#title {
+  position: absolute;
+  top: 38%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  font-family: 'Fugaz One', cursive;
+  font-weight: normal;
+  text-align: center;
+  font-size: 60px;
+  text-shadow: rgba(0, 0, 0, 0.621) 5px 5px 5px;
+}
+
+.login {
+  position: absolute;
+  top: 57%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  height: auto;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+}
+
+.login-content {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  color: var(--black);
+}
+
+#yellow {
+  color: var(--yellow);
+}
+
+#red {
+  color: var(--red);
+}
+
+@media screen and (max-width: 900px) {
+  #title {
+    display: none;
+  }
+
+  .login {
+  position: absolute;
+  top: 52%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
+}
+
+/* COLUMNS */
+.column1, .column2, .column3 {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px 10px;
+}
+
+.column1 {
+  display: block;
+  float: left;
+  width: 30%;
+  height: auto;
+  margin-right: 2%;
+}
+
+.column2 {
+  display: block;
+  float: left;
+  width: 30%;
+  height: auto;
+  margin-right: 2%;
+}
+
+.column3 {
+  display: block;
+  float: left;
+  width: 30%;
+  height: auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 900px) {
+  .column1,
+  .column2,
+  .column3 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+
+.row i {
+  font-size: 40px;
+}
+
+.row h3 {
+  font-family: 'Open Sans', cursive;
+}

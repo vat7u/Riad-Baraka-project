@@ -1,0 +1,216 @@
+/* UNIVERSAL */
+:root {
+  --yellow: #78c1ff;
+  --red: #003f9a;
+  --black: #232323;
+  --grey: #6f6f6f;
+  --white: #ffffff;
+  --white2: #F7F7F7;  /* only for background */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+  background-color: var(--white2);
+  overflow-x: hidden;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 60px;
+  /* footer height */
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* CONTENT */
+.header {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.header>.content-margin {
+  padding: 25px 0;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin-bottom: -10px;
+}
+
+/* SIGN UP FORM */
+.row {
+  margin: 40px 100px 0 100px;
+}
+
+.column1 {
+  float: left;
+  width: 60%;
+  height: 400px;
+  padding: 10px;
+}
+
+.column-mid {
+  float: left;
+  width: 5%;
+  height: 400px;
+}
+
+.column2 {
+  float: left;
+  width: 35%;
+  height: 400px;
+  padding: 10px;
+
+  background-image: url('../images/24chicken-branch.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 900px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 50px;
+  }
+
+  .column1,
+  .column2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .column1 {
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .column-mid {
+    display: none;
+  }
+
+  .column2 {
+    order: 1;
+    height: 350px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    background-image: url('../images/24chicken-branch.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+  }
+}
+
+#heading {
+  margin-top: 0;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.form-half {
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.form-left {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  padding-right: 10px;
+}
+
+.form-right {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  padding-left: 10px;
+}
+
+form label {
+  color: var(--black);
+  font-size: 12px;
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=password] {
+  width: 100%;
+  padding: 6px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 2px solid #bdbdbd;
+  border-radius: 3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+form input[type=submit] {
+  display: block;
+  margin: 0 auto;
+  width: 265px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  background-color: var(--black);
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  border-radius: 3px;
+  color: var(--white);
+  border: none;
+}
+
+form input[type=submit]:hover {
+  background-color: var(--red);
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+  .form-half {
+    vertical-align: top;
+  }
+
+  .form-left, .form-right {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-left {
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,434 @@
+/* UNIVERSAL */
+:root {
+    --yellow: #78c1ff;
+    --red: #003f9a;
+    --black: #232323;
+    --grey: #6f6f6f;
+    --white: #ffffff;
+    --white2: #F7F7F7;
+    /* only for background */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--black);
+    background-color: var(--white2);
+    overflow-x: hidden;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 60px;
+    /* footer height */
+}
+
+.content-margin {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+    .content-margin {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+/* CONTENT */
+.header {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.header>.content-margin {
+    padding: 25px 0;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: -10px;
+}
+
+#heading {
+    margin-top: 0;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* ADD ITEM */
+.add-item {
+    margin: 40px 100px;
+}
+
+.add-flavor {
+    display: block;
+    float: left;
+    width: 45%;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.add-quantity {
+    display: block;
+    float: left;
+    width: 25%;
+    height: auto;
+    padding-top: 10px;
+}
+
+.add-button {
+    display: block;
+    float: left;
+    width: 30%;
+    height: auto;
+    padding-top: 5px;
+}
+
+/* Clear floats after the columns */
+.add-item:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 900px) {
+    .add-item {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 50px;
+    }
+
+    .add-flavor,
+    .add-quantity,
+    .add-button {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.add-flavor label, .add-quantity label {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: var(--red);
+    vertical-align: top;
+}
+
+.add-flavor label {
+    width: 15%;
+}
+
+.add-quantity label {
+    width: 30%;
+}
+
+.add-item select, .add-item input[type=number]{
+    display: inline-block;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 2px solid #bdbdbd;
+    border-radius: 3px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.add-item select {
+    width: 80%;
+}
+
+.add-item input[type=number] {
+    width: 65%;
+}
+
+#add-button {
+    display: block;
+    float: right;
+    width: 80%;
+    padding: 12px 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#add-button:hover {
+    background-color: var(--red);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 900px) {
+    .add-quantity label {
+            width: 30%;
+        }
+    .add-item select, .add-item input[type=number] {
+        width: 65%;
+        float: right;
+    }
+
+    #add-button {
+        margin: 20px auto 0 auto;
+        width: 35%;
+    }
+}
+
+/* ITEMS ADDED */
+.items-added {
+    margin: 40px 100px;
+}
+
+.leftside {
+    display: block;
+    float: left;
+    width: 45%;
+    height: auto;
+}
+
+.column-mid {
+    display: block;
+    float: left;
+    width: 5%;
+    height: 400px;
+}
+
+#divider {
+    display: none;
+}
+
+.rightside {
+    display: block;
+    float: left;
+    width: 50%;
+    height: auto;
+}
+
+/* Clear floats after the columns */
+.items-added:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 900px) {
+    .items-added {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 50px;
+    }
+
+    .leftside,
+    .rightside {
+        width: 100%;
+        height: auto;
+    }
+
+    .column-mid {
+        height: 20px;
+    }
+
+    #divider {
+        display: block;
+    }
+}
+
+.item {
+    background-color: #d0d0d0;
+    border-radius: 10px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.item-image {
+    float: left;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+#flavor,
+#price-quantity {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 15px;
+}
+
+#flavor {
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+    width: 50%;
+}
+
+#price-quantity {
+    display: inline-block;
+    text-align: right;
+    margin-top: 33px;
+    width: 15%;
+}
+
+.quantity {
+    color: var(--grey);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.delete {
+    float: right;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: var(--grey);
+    color: var(--white);
+    border: none;
+}
+
+.delete i {
+    font-size: 30px;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.delete:hover {
+    background-color: var(--red);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 900px) {
+    #flavor,
+    #price-quantity {
+        padding-right: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #flavor {
+        width: 30%;
+        font-size: 14px;
+    }
+
+    #price-quantity {
+        font-size: 12px;
+        width: 15%;
+    }
+
+    .delete {
+        float: right;
+        display: inline-block;
+        width: 55px;
+        height: 80px;
+        margin-top: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        background-color: var(--grey);
+        color: var(--white);
+        border: none;
+    }
+}
+
+#label-type {
+    display: inline-block;
+    width: 60%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: var(--red);
+    vertical-align: top;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#type,
+#promo {
+    width: 30%;
+    float: right;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 2px solid #bdbdbd;
+    border-radius: 3px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+#label-total {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
+}
+
+#total-price {
+    width: 50%;
+    text-align: right;
+    font-weight: bold;
+    float: right;
+    margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+#cancel-button, #save-button {
+    display: inline-block;
+    width: 35%;
+    padding: 12px 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border: none;
+
+}
+
+#cancel-button {
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+#cancel-button:hover {
+    background-color: var(--red);
+    transition: 0.5s;
+}
+
+#save-button {
+    float: right;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#save-button:hover {
+    background-color: var(--red);
+    transition: 0.5s;
+}

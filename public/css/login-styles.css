@@ -1,0 +1,134 @@
+/* UNIVERSAL */
+:root {
+  --yellow: #78c1ff;
+  --red: #003f9a;
+  --black: #232323;
+  --grey: #6f6f6f;
+  --white: #ffffff;
+  --white2: #F7F7F7; /* only for background */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+  background-color: var(--white2);
+  background-image: url('/images/24chicken-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.352);
+  overflow-x: hidden;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 60px; /* footer height */
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* CONTENT */
+.login {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  background-color: var(--white);
+  width: 400px;
+  height: 420px;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+}
+
+.login-content {
+  margin: -15px 60px;
+}
+
+.login h1 {
+  font-family: 'Fugaz One', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  font-size: 40px;
+}
+
+#yellow {
+  color: var(--yellow);
+  font-size: larger;
+}
+
+#red {
+  color: var(--red);
+}
+
+.login label {
+  color: var(--black);
+  font-size: 12px;
+}
+
+.login input[type=email], .login input[type=password] {
+  width: 100%;
+  padding: 6px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #bdbdbd;
+  border-radius: 3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.login input[type=submit] {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  margin: 20px auto;
+  box-sizing: border-box;
+  background-color: var(--black);
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  border-radius: 3px;
+  color: var(--white);
+  border: none;
+}
+
+.login input[type=submit]:hover {
+  background-color: var(--red);
+  transition: 0.5s;
+}
+
+.login p {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 10px;
+  color: var(--grey);
+}
+
+.login a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.login a:hover {
+  color: var(--red);
+}
